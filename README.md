@@ -111,9 +111,11 @@ dokku solr:link lolipop playground
 # and the following will be set on the linked application by default
 #
 #   SOLR_URL=http://dokku-solr-lolipop:8983/solr/lolipop
+#   JDBC_SOLR_URL=http://dokku-solr-lolipop:8983/solr/lolipop?user=&password=
 #
 # NOTE: the host exposed here only works internally in docker containers. If
 # you want your container to be reachable from outside, you should use `expose`.
+# As well, we shall omit the JDBC url from all following examples for brevity.
 
 # another service can be linked to your app
 dokku solr:link other_service playground
